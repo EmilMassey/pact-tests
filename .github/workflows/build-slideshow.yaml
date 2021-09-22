@@ -1,0 +1,18 @@
+on:
+  push:
+    paths:
+      - 'slideshow/assets/**'
+      - 'slideshow/slideshow.md'
+
+jobs:
+  build-slideshow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npx @marp-team/marp-cli@latest slideshow/slideshow.md -o index.html
+      - run: sed -i 's/assets\//slideshow\/assets\//' index.html
+      - run: git config user.email "emil@rainbowbrains.pl" &&git config user.name "Emil Masiakowski"
+      - run: git add index.html && git commit -m "Build index.html" index.html && git push
