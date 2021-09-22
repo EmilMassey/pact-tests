@@ -39,7 +39,7 @@ class AddressClientTest extends TestCase
                 $matcher->eachLike([
                     'street' => 'lorem',
                     'city' => 'ipsum',
-                    'postcode' => '00-000',
+                    'postalCode' => '00-000',
                 ])
             );
 
@@ -77,7 +77,7 @@ class AddressClientTest extends TestCase
                 $matcher->like([
                     'street' => 'lorem',
                     'city' => 'ipsum',
-                    'postcode' => '00-000',
+                    'postalCode' => '00-000',
                 ])
             );
 

@@ -42,7 +42,7 @@ $app->get('/address/{id}', function (ServerRequestInterface $request, ResponseIn
     $address = $database->getAddress($id);
 
     if ($address !== null) {
-        $richAddress = RichAddress::createFromParent($address, 'John', 'Kowalski');
+        $richAddress = RichAddress::createFromAddress($address, 'John', 'Kowalski');
         $response->getBody()->write($serializer->serialize($richAddress, 'json'));
     } else {
         $response = $response->withStatus(404);

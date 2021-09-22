@@ -4,14 +4,26 @@ namespace Emil\PactTests\Provider\Model;
 
 use Emil\PactTests\Domain\Model\Address;
 
-class RichAddress extends Address
+class RichAddress
 {
+    public string $street;
+    public string $city;
+    public string $postcode;
     public ?string $firstname = null;
     public ?string $lastname = null;
 
-    public static function createFromParent(Address $parent, ?string $firstname, ?string $lastname): self
+    public function __construct(string $street, string $city, string $postcode, ?string $firstname = null, ?string $lastname = null)
     {
-        $address = new self($parent->street, $parent->city, $parent->postcode);
+        $this->street = $street;
+        $this->city = $city;
+        $this->postcode = $postcode;
+        $this->firstname = $firstname;
+        $this->lastname = $lastname;
+    }
+
+    public static function createFromAddress(Address $address, ?string $firstname, ?string $lastname): self
+    {
+        $address = new self($address->street, $address->city, $address->postalCode);
         $address->firstname = $firstname;
         $address->lastname = $lastname;
 

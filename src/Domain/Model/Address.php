@@ -9,12 +9,12 @@ class Address
     /** @readonly */
     public string $city;
     /** @readonly */
-    public string $postcode;
+    public string $postalCode;
 
-    public function __construct(string $street, string $city, string $postcode)
+    public function __construct(string $street, string $city, string $postalCode)
     {
         $this->street = $street;
         $this->city = $city;
-        $this->postcode = $postcode;
+        $this->postalCode = $postalCode;
     }
 }
