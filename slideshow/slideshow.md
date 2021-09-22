@@ -66,7 +66,7 @@ https://github.com/EmilMassey/pact-tests
 * darmowy docker lub płatny, ale przyjaźniejszy i bogatszy pactflow.io
 * wyraźnie widać problemy z kompatybilnością **jeszcze przed wypchnięciem**
 * widać nad czym pracują zespoły odpowiedzialne za consumery
-* pewien rodzaj dokumentacji (IMO mało czytelna)
+* pewien rodzaj dokumentacji *(IMO mało czytelna)*
 
 Przykład: https://github.com/EmilMassey/pact-tests/tree/with-broker
 
