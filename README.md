@@ -1,4 +1,7 @@
 # Pact Test application
+This branch is the version using pact JSON file. If you want to see example using the broker instead,
+see the [`with-broker` branch](https://github.com/EmilMassey/pact-tests/tree/with-broker).
+
 ## Requirements
 * PHP 8.0
 
