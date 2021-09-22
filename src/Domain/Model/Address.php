@@ -2,7 +2,7 @@
 
 namespace Emil\PactTests\Domain\Model;
 
-final class Address
+class Address
 {
     /** @readonly */
     public string $street;

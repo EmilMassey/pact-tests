@@ -40,7 +40,7 @@ class PactVerificationTest extends TestCase
             ->setEnablePending(true);
 
         $verifier = new Verifier($config);
-        $verifier->verify('someConsumer');
+        $verifier->verifyAll();
 
         $this->assertTrue(true, 'Pact Verification has failed.');
     }

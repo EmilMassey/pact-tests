@@ -3,6 +3,7 @@
 use DI\Container;
 use Emil\PactTests\Domain\Model\Address;
 use Emil\PactTests\Provider\Database;
+use Emil\PactTests\Provider\Model\RichAddress;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -41,7 +42,8 @@ $app->get('/address/{id}', function (ServerRequestInterface $request, ResponseIn
     $address = $database->getAddress($id);
 
     if ($address !== null) {
-        $response->getBody()->write($serializer->serialize($address, 'json'));
+        $richAddress = RichAddress::createFromParent($address, 'John', 'Kowalski');
+        $response->getBody()->write($serializer->serialize($richAddress, 'json'));
     } else {
         $response = $response->withStatus(404);
         $response->getBody()->write($serializer->serialize([
