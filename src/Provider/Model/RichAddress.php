@@ -8,15 +8,15 @@ class RichAddress
 {
     public string $street;
     public string $city;
-    public string $postcode;
+    public string $postalCode;
     public ?string $firstname = null;
     public ?string $lastname = null;
 
-    public function __construct(string $street, string $city, string $postcode, ?string $firstname = null, ?string $lastname = null)
+    public function __construct(string $street, string $city, string $postalCode, ?string $firstname = null, ?string $lastname = null)
     {
         $this->street = $street;
         $this->city = $city;
-        $this->postcode = $postcode;
+        $this->postalCode = $postalCode;
         $this->firstname = $firstname;
         $this->lastname = $lastname;
     }

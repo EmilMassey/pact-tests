@@ -30,7 +30,7 @@ class PactVerificationTest extends TestCase
         $config = new VerifierConfig();
         $config
             ->setProviderName('someProvider')
-            ->setProviderVersion('1.0.0')
+            ->setProviderVersion('2.0.0')
             ->setProviderBaseUrl(new Uri('http://localhost:7202'))
             ->setProviderStatesSetupUrl('http://localhost:7202/setup-pact-state')
             ->setBrokerUri(new Uri('http://localhost:9292'))
