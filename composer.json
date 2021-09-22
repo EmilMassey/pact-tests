@@ -31,7 +31,7 @@
         "php-di/php-di": "^6.3"
     },
     "require-dev": {
-        "pact-foundation/pact-php": "^7.1",
+        "pact-foundation/pact-php": "dev-master",
         "phpunit/phpunit": "^9.5"
     }
 }

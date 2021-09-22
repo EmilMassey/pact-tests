@@ -32,10 +32,15 @@ class PactVerificationTest extends TestCase
             ->setProviderName('someProvider')
             ->setProviderVersion('1.0.0')
             ->setProviderBaseUrl(new Uri('http://localhost:7202'))
-            ->setProviderStatesSetupUrl('http://localhost:7202/setup-pact-state');
+            ->setProviderStatesSetupUrl('http://localhost:7202/setup-pact-state')
+            ->setBrokerUri(new Uri('http://localhost:9292'))
+            ->setPublishResults(true)
+            ->setProcessTimeout(60)
+            ->setProcessIdleTimeout(10)
+            ->setEnablePending(true);
 
         $verifier = new Verifier($config);
-        $verifier->verifyFiles([__DIR__ . '/../../pacts/someconsumer-someprovider.json']);
+        $verifier->verify('someConsumer');
 
         $this->assertTrue(true, 'Pact Verification has failed.');
     }

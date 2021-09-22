@@ -24,6 +24,7 @@
         <env name="PACT_CONSUMER_TAG" value="main"/>
         <env name="PACT_PROVIDER_NAME" value="someProvider"/>
         <env name="PACT_OUTPUT_DIR" value="./pacts"/>
+        <env name="PACT_BROKER_URI" value="http://localhost:9292"/>
         <env name="PACT_MOCK_SERVER_HEALTH_CHECK_TIMEOUT" value="10"/>
     </php>
 </phpunit>

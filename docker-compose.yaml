@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-password}
+
+  broker:
+    image: pactfoundation/pact-broker:2.86.0.0
+    ports:
+      - "9292:9292"
+    depends_on:
+      - db
+    environment:
+      PACT_BROKER_PORT: '9292'
+      PACT_BROKER_DATABASE_URL: "postgres://postgres:password@db/postgres"
+      PACT_BROKER_LOG_LEVEL: INFO
+      PACT_BROKER_SQL_LOG_LEVEL: DEBUG
