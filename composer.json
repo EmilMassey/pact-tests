@@ -1,0 +1,37 @@
+{
+    "name": "emil/pact-tests",
+    "description": "Testing pact",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Emil\\PactTests\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Emil\\PactTests\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Emil Masiakowski",
+            "email": "emil.masiakowski@platformazakupowa.pl"
+        }
+    ],
+    "require": {
+        "php": ">8.0",
+        "webmozart/assert": "^1.10",
+        "symfony/serializer": "^5.3",
+        "guzzlehttp/guzzle": "^7.3",
+        "slim/slim": "^4.8",
+        "slim/http": "^1.2",
+        "slim/psr7": "^1.4",
+        "symfony/property-access": "^5.3",
+        "php-di/php-di": "^6.3"
+    },
+    "require-dev": {
+        "pact-foundation/pact-php": "^7.1",
+        "phpunit/phpunit": "^9.5"
+    }
+}

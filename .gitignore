@@ -1,0 +1,5 @@
+.idea
+log
+pacts
+.phpunit.result.cache
+vendor
