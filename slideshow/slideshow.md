@@ -120,9 +120,10 @@ Provider jest uaktualniony => consumer może zostać wydany
 
 * kiedy to provider ustala potrzeby API, a nie consumer
 * consumerzy i providerzy nie są stale rozwijani
-* używamy wspólnych interfejsów w serwisach w celu zapewnienia zgodności (pact by tylko duplikował kontrakty wymuszane przez język programowania)
 * wystarczą prostsze narzędzia, np. te, które weryfikują zgodność OpenApi z rzeczywistością
 * chcemy testować zachowania, a nie samą zgodność z oczekiwaniami flow request-response - do tego są testy funckjonalne
+
+* *??? używamy wspólnych interfejsów w serwisach w celu zapewnienia zgodności (pact by tylko duplikował kontrakty wymuszane przez język programowania) <ale może to jest wtedy faktycznie monolit? a zresztą nie mamy żadnej gwarancji, że programiści będą korzystali z interfejsów>*
 
 ---
 
